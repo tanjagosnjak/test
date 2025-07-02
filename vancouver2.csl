@@ -47,14 +47,14 @@
     </date>
   </locale>
   <macro name="author">
-    <names variable="author">
-      <name initialize-with=". " name-as-sort-order="first" form="long" delimiter=", " delimiter-precedes-last="never"/>
-      <label prefix=", "/>
-      <substitute>
-        <names variable="editor"/>
-      </substitute>
-    </names>
-  </macro>
+  <names variable="author" delimiter=", " delimiter-precedes-last="never" name-as-sort-order="first" initialize-with=". " form="long">
+    <name and="text"/>
+    <label prefix=", "/>
+    <substitute>
+      <names variable="editor"/>
+    </substitute>
+  </names>
+</macro>
   <macro name="editor">
     <names variable="editor" suffix=".">
       <name sort-separator=" " initialize-with="" name-as-sort-order="all" delimiter=", " delimiter-precedes-last="always"/>
