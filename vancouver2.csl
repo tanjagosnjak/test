@@ -87,14 +87,14 @@
     </choose>
   </macro>
   <macro name="access">
-    <choose>
-      <if variable="URL">
-        <group delimiter=": ">
-          <text value=""/>
-          <text variable="URL" prefix="Dostopno na: "/>
-        </group>
-      </if>
-    </choose>
+  <choose>
+    <if variable="DOI">
+      <text variable="DOI" prefix=" https://doi.org/"/>
+    </if>
+    <else-if variable="URL">
+      <text variable="URL" prefix=" Dostopno na: "/>
+    </else-if>
+  </choose>
   </macro>
   <macro name="accessed-date">
     <choose>
@@ -307,30 +307,18 @@
     </layout>
   </citation>
   <bibliography et-al-min="7" et-al-use-first="6" second-field-align="flush">
-    <layout>
-      <text variable="citation-number" prefix="[" suffix="]"/>
-      <group delimiter=": " suffix=". ">
-        <text macro="author"/>
-        <text macro="title"/>
-      </group>
-      <group delimiter=" " suffix=". ">
-        <group delimiter=": ">
-          <text macro="chapter-marker"/>
-          <group delimiter=" ">
-            <text macro="editor"/>
-            <text macro="container-title"/>
-          </group>
-        </group>
-        <text macro="publisher" font-style="italic"/>
-        <group>
-          <text macro="date"/>
-          <text macro="journal-location"/>
-          <text macro="pages"/>
-        </group>
-      </group>
-      <text macro="collection-details" suffix=". "/>
-      <text macro="report-details" suffix=". "/>
-      <text macro="access"/>
-    </layout>
-  </bibliography>
+  <layout>
+    <text variable="citation-number" prefix="[" suffix="] "/>
+    <text macro="author"/>
+    <text value=": " />
+    <text macro="title" suffix=" "/>
+    <group delimiter=" " suffix=".">
+      <text macro="container-title" font-style="italic"/>
+      <text macro="date"/>
+      <text variable="volume" font-style="italic" prefix=", "/>
+      <text variable="page" prefix=", "/>
+    </group>
+    <text macro="access"/>
+  </layout>
+</bibliography>
 </style>
