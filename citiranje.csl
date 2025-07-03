@@ -51,7 +51,7 @@
         <text variable="title" font-style="italic"/>
       </if>
       <else>
-        <text variable="title"/>
+        <text variable="title"  suffix=". "/>
       </else>
     </choose>
   </macro>
