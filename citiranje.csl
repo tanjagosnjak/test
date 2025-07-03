@@ -95,10 +95,10 @@
         <group suffix=".">
           <text variable="URL"/>
           <group prefix=" (" suffix=")">
-            <text term="accessed" text-case="capitalize-first" suffix=": "/>
+            <text value="pridobljeno "/>
             <date variable="accessed">
               <date-part name="day" suffix=". "/>
-              <date-part name="month" form="short" strip-periods="true" suffix=". "/>
+              <date-part name="month" form="short" text-case="lowercase" strip-periods="true" suffix=". "/>
               <date-part name="year"/>
             </date>
           </group>
