@@ -40,7 +40,7 @@
   <!-- AVTORJI -->
   <macro name="author">
     <names variable="author" delimiter=", ">
-      <name initialize-with=". " name-as-sort-order="first" and="text"/>
+      <name initialize-with=". " name-as-sort-order="first"/>
     </names>
   </macro>
 
