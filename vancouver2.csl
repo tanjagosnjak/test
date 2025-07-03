@@ -47,8 +47,8 @@
     </date>
   </locale>
   <macro name="author">
-  <names variable="author" delimiter=", " delimiter-precedes-last="never" name-as-sort-order="first" initialize-with=". " form="long">
-    <name and="text"/>
+  <names variable="author" delimiter=", " delimiter-precedes-last="never" initialize-with=". " form="long">
+    <name name-as-sort-order="all" and="text"/>
     <label prefix=", "/>
     <substitute>
       <names variable="editor"/>
